@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" tag-format="semantics-ms/1.0" 
+root="mouskie" xmlns="http://www.w3.org/2001/06/grammar">
+      <rule id="mouskie" scope="public">
+            <ruleref special="GARBAGE" />
+            <one-of>
+                  <item>
+                        <one-of>
+                              <item>quitter</item>
+                              <item>fermer</item>
+                        </one-of>
+                        <tag>$.mouskie={}; $.mouskie._value="QUIT";</tag>
+                  </item>
+                  <item>
+                        <one-of>
+                              <item>suivant</item>
+                        </one-of>
+                        <tag>$.mouskie={}; $.mouskie._value="NEXT";</tag>
+                  </item>
+				  <item>
+                        <one-of>
+                              <item>precedent</item>
+                        </one-of>
+                        <tag>$.mouskie={}; $.mouskie._value="PREV";</tag>
+                  </item>
+				  <item>
+                        <one-of>
+                              <item>stop</item>
+                        </one-of>
+                        <tag>$.mouskie={}; $.mouskie._value="STOP";</tag>
+                  </item>
+				  <item>
+                        <one-of>
+                              <item>jouer</item>
+                        </one-of>
+                        <tag>$.mouskie={}; $.mouskie._value="PLAY";</tag>
+                  </item>
+				  <item>
+                        <one-of>
+                              <item>pause</item>
+                        </one-of>
+                        <tag>$.mouskie={}; $.mouskie._value="PAUSE";</tag>
+                  </item>
+            </one-of>
+            <ruleref special="GARBAGE" />
+      </rule>
+</grammar>
